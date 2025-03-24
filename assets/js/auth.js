@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const userRole = getUserRole(email, password); // Cek apakah user atau admin
 
         if (userRole === "admin") {
-            window.location.href = "admindashboard.html"; // Redirect ke dashboard admin
+            window.location.href = "dashboard-admin.html"; // Redirect ke dashboard admin
         } else if (userRole === "user") {
             window.location.href = "user-dashboard.html"; // Redirect ke dashboard user
         } else {
