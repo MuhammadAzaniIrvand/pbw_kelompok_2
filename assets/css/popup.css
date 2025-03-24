@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.popup {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.popup-content {
+    padding: 24px;
+}
+
+.icon-container {
+    width: 48px;
+    height: 48px;
+    background: #007AFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.exclamation {
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.popup-text h2 {
+    color: #FF3B30;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.popup-text p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.popup-buttons {
+    display: flex;
+    border-top: 1px solid #eee;
+    margin: 0 -24px -24px;
+}
+
+.popup-buttons button {
+    flex: 1;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn {
+    background: #F2F2F7;
+    color: #666;
+}
+
+.cancel-btn:hover {
+    background: #E5E5EA;
+}
+
+.confirm-btn {
+    background: #FF3B30;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background: #FF2D55;
+}

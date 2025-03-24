@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdemyX - User Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/navbar-sidebar.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Unified Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="logo">
+                    <a href="index.html">EdemyX</a>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Explore <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="dropdown-column">
+                                    <h4>Explore Certifications</h4>
+                                    <ul>
+                                        <li><a href="#">Certification Prep</a></li>
+                                        <li><a href="#">Development</a></li>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Finance & Accounting</a></li>
+                                        <li><a href="#">IT & Software</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Popular Categories</h4>
+                                    <ul>
+                                        <li><a href="#">Engineering</a></li>
+                                        <li><a href="#">Humanities</a></li>
+                                        <li><a href="#">Mathematics</a></li>
+                                        <li><a href="#">Science</a></li>
+                                        <li><a href="#">Online Education</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Special Topics</h4>
+                                    <ul>
+                                        <li><a href="#">Language Learning</a></li>
+                                        <li><a href="#">Teacher Training</a></li>
+                                        <li><a href="#">Test Preparation</a></li>
+                                        <li><a href="#">Teaching & Academics</a></li>
+                                        <li><a href="#">Social Sciences</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for courses...">
+                </div>
+            </div>
+            <div class="navbar-right">
+                <a href="wishlist.html" class="nav-icon"><i class="fas fa-heart"></i></a>
+                <a href="notifications.html" class="nav-icon"><i class="fas fa-bell"></i></a>
+                <div class="user-menu">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="user-avatar">
+                    <div class="user-dropdown">
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="my-courses.html">My Courses</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="active"><a href="dashboard.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                <li><a href="my-courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+                <li><a href="certificates.html"><i class="fas fa-certificate"></i> Certificates</a></li>
+                <li><a href="progress.html"><i class="fas fa-chart-line"></i> Progress</a></li>
+                <li><a href="#"><i class="fas fa-calendar"></i> Schedule</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            </ul>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <div class="welcome-section">
+                <h2>Welcome back, Edemyers!</h2>
+                <p>Continue learning and developing your skills.</p>
+            </div>
+            <!-- Courses You May Like -->
+            <section class="recommended-courses">
+                <div class="section-header">
+                    <h3>Courses You May Like</h3>
+                </div>
+                <div class="course-cards">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/fullstack.jpg" alt="Full Stack Development">
+                        </div>
+                        <div class="course-details">
+                            <h4>Full Stack Web Development</h4>
+                            <p class="instructor">by David Miller</p>
+                            <p class="course-info">Learn frontend & backend development with real projects.</p>
+                            <a href="course-detail.html?course=fullstack" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/UIUX.png" alt="UI/UX Design">
+                        </div>
+                        <div class="course-details">
+                            <h4>UI/UX Design Fundamentals</h4>
+                            <p class="instructor">by Sarah Lee</p>
+                            <p class="course-info">Master user experience & interface design for web and mobile apps.</p>
+                            <a href="course-detail.html?course=uiux" class="enroll-btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Overview -->
+            <div class="progress-overview">
+                <h3>Your Progress</h3>
+                <div class="progress-cards">
+                    <div class="progress-card">
+                        <div class="progress-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="progress-details">
+                            <h4>Courses Enrolled</h4>
+                            <p>8 Courses</p>
+                        </div>
+                    </div>
+                    <div class="progress-card">
+                        <div class="progress-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="progress-details">
+                            <h4>Certificates Earned</h4>
+                            <p>3 Certificates</p>
+                        </div>
+                    </div>
+                    <div class="progress-card">
+                        <div class="progress-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="progress-details">
+                            <h4>Hours Spent</h4>
+                            <p>42 Hours</p>
+                        </div>
+                    </div>
+                    <div class="progress-card">
+                        <div class="progress-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="progress-details">
+                            <h4>Assignments</h4>
+                            <p>12 Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Courses -->
+            <section class="current-courses">
+                <div class="section-header">
+                    <h3>Continue Learning</h3>
+                    <a href="my-courses.html" class="view-all">View All</a>
+                </div>
+                <div class="course-cards">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/webdev.jpg" alt="Web Development">
+                            <div class="progress-indicator">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <h4>Complete Web Development Bootcamp</h4>
+                            <p class="instructor">by Jane Smith</p>
+                            <div class="course-progress">
+                                <span class="progress-text">75% Complete</span>
+                                <span class="time-left">2h 15m left</span>
+                            </div>
+                            <a href="../root/course-player.html" class="continue-btn">Continue</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/python.jpg" alt="Python Course">
+                            <div class="progress-indicator">
+                                <div class="progress-bar" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <h4>Python for Data Science</h4>
+                            <p class="instructor">by Robert Johnson</p>
+                            <div class="course-progress">
+                                <span class="progress-text">35% Complete</span>
+                                <span class="time-left">8h 45m left</span>
+                            </div>
+                            <a href="../root/course-player.html" class="continue-btn">Continue</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/UI-UX-Design.jpg" alt="UX Design">
+                            <div class="progress-indicator">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <h4>UI/UX Design Fundamentals</h4>
+                            <p class="instructor">by Sarah Williams</p>
+                            <div class="course-progress">
+                                <span class="progress-text">60% Complete</span>
+                                <span class="time-left">4h 30m left</span>
+                            </div>
+                            <a href="../root/course-player.html" class="continue-btn">Continue</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommended Courses -->
+            <section class="recommended-courses">
+                <div class="section-header">
+                    <h3>Recommended for You</h3>
+                    <a href="recommendations.html" class="view-all">View All</a>
+                </div>
+                <div class="course-cards">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/jskonsep.png" alt="JavaScript Course">
+                            <span class="course-tag">Popular</span>
+                        </div>
+                        <div class="course-details">
+                            <h4>Advanced JavaScript Concepts</h4>
+                            <p class="instructor">by David Miller</p>
+                            <div class="course-stats">
+                                <span><i class="fas fa-star"></i> 4.8 (2.4k reviews)</span>
+                                <span><i class="fas fa-user"></i> 12.5k students</span>
+                            </div>
+                            <div class="course-price">
+                                <span class="price">$49.99</span>
+                                <span class="original-price">$99.99</span>
+                            </div>
+                            <a href="#" class="wishlist-btn" data-course="Advanced JavaScript Concepts" aria-label="Add to wishlist"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/Thecomplate.jpeg" React Course">
+                            <span class="course-tag">Bestseller</span>
+                        </div>
+                        <div class="course-details">
+                            <h4>React - The Complete Guide</h4>
+                            <p class="instructor">by Michael Brown</p>
+                            <div class="course-stats">
+                                <span><i class="fas fa-star"></i> 4.9 (3.8k reviews)</span>
+                                <span><i class="fas fa-user"></i> 18.2k students</span>
+                            </div>
+                            <div class="course-price">
+                                <span class="price">$59.99</span>
+                                <span class="original-price">$119.99</span>
+                            </div>
+                            <a href="#" class="wishlist-btn" data-course="The Complete Guide" aria-label="Add to wishlist"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/ML.jpg" alt="Machine Learning">
+                            <span class="course-tag">New</span>
+                        </div>
+                        <div class="course-details">
+                            <h4>Machine Learning A-Z</h4>
+                            <p class="instructor">by Jennifer Lee</p>
+                            <div class="course-stats">
+                                <span><i class="fas fa-star"></i> 4.7 (1.9k reviews)</span>
+                                <span><i class="fas fa-user"></i> 9.8k students</span>
+                            </div>
+                            <div class="course-price">
+                                <span class="price">$69.99</span>
+                                <span class="original-price">$129.99</span>
+                            </div>
+                            <a href="#" class="wishlist-btn" data-course="Machine Learning A-Z" aria-label="Add to wishlist"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Events -->
+            <section class="upcoming-events">
+                <div class="section-header">
+                    <h3>Upcoming Live Sessions</h3>
+                    <a href="calendar.html" class="view-all">View Calendar</a>
+                </div>
+                <div class="events-list">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Web Application Security Workshop</h4>
+                            <p><i class="fas fa-clock"></i> 14:00 - 16:00</p>
+                            <p><i class="fas fa-user"></i> Instructor: Alex Turner</p>
+                        </div>
+                        <a href="#" class="join-btn">Set Reminder</a>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Career in Web Development Q&A</h4>
+                            <p><i class="fas fa-clock"></i> 19:00 - 20:30</p>
+                            <p><i class="fas fa-user"></i> Panel Discussion</p>
+                        </div>
+                        <a href="#" class="join-btn">Set Reminder</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>EdemyX</h2>
+                        <p>Learn without limits</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Become an Instructor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EdemyX, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

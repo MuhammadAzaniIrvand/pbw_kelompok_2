@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - EdemyX</title>
+    <link rel="stylesheet" href="../assets/css/navbar-sidebar.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+      <!-- Unified Navigation -->
+      <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="logo">
+                    <a href="index.html">EdemyX</a>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Explore <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="dropdown-column">
+                                    <h4>Explore Certifications</h4>
+                                    <ul>
+                                        <li><a href="#">Certification Prep</a></li>
+                                        <li><a href="#">Development</a></li>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Finance & Accounting</a></li>
+                                        <li><a href="#">IT & Software</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Popular Categories</h4>
+                                    <ul>
+                                        <li><a href="#">Engineering</a></li>
+                                        <li><a href="#">Humanities</a></li>
+                                        <li><a href="#">Mathematics</a></li>
+                                        <li><a href="#">Science</a></li>
+                                        <li><a href="#">Online Education</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Special Topics</h4>
+                                    <ul>
+                                        <li><a href="#">Language Learning</a></li>
+                                        <li><a href="#">Teacher Training</a></li>
+                                        <li><a href="#">Test Preparation</a></li>
+                                        <li><a href="#">Teaching & Academics</a></li>
+                                        <li><a href="#">Social Sciences</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href=#>Courses</a></li>
+                    <li><a href=#>Categories</a></li>
+                </ul>
+            </div>
+            <div class="navbar-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for courses...">
+                </div>
+            </div>
+            <div class="navbar-right">
+                <a href="wishlist.html" class="nav-icon"><i class="fas fa-heart"></i></a>
+                <a href="notifications.html" class="nav-icon"><i class="fas fa-bell"></i></a>
+                <div class="user-menu">
+                    <img src="../assets/images/pp.jpg" alt="Profile Picture" id="profile-pic">
+                    <div class="user-dropdown">
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="my-courses.html">My Courses</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="settings.html">Settings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+ <main class="main-content">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="user-dashboard.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+            <li><a href="my-courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+            <li><a href="certificates.html"><i class="fas fa-certificate"></i> Certificates</a></li>
+            <li><a href="progress.html"><i class="fas fa-chart-line"></i> Progress</a></li>
+            <li><a href="schedule.html"><i class="fas fa-calendar"></i> Schedule</a></li>
+            <li class="active"><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </aside>
+
+        <main class="main-content">
+            <div class="profile-section">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="profile-image">
+                            <img src="../assets/images/pp.jpg" alt="Profile Picture" class="profile-pic">
+                        </div>
+                    </div>
+                    <div class="profile-upload">
+                        <input type="file" id="profilePicture" accept="image/*">
+                        <label for="profilePicture" class="upload-btn">
+                            <i class="fas fa-camera"></i> Change Photo
+                        </label>
+                    </div>
+                    
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div class="info-content">
+                                <label>NAME</label>
+                                <p id="name">Halim Elsa Putra</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info-content">
+                                <label>EMAIL ADDRESS</label>
+                                <p id="email">halim@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="info-content">
+                                <label>PHONE NUMBER</label>
+                                <p id="phone">+62-8774493221</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <button class="edit-profile-btn">
+                            <i class="fas fa-pen"></i>
+                            EDIT PROFILE
+                        </button>
+                        <button class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            LOGOUT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Tambahkan popup sebelum penutup body tag -->
+    <div class="popup" id="confirmationPopup">
+        <div class="popup-content">
+            <div class="icon-container">
+                <i class="exclamation">!</i>
+            </div>
+            <div class="popup-text">
+                <h2>Are you sure?</h2>
+                <p>Are you sure you want to logout from your account?</p>
+            </div>
+            <div class="popup-buttons">
+                <button class="cancel-btn" onclick="closePopup()">Cancel</button>
+                <button class="confirm-btn" onclick="confirmAction()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tambahkan modal edit profile sebelum penutup body tag -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+            </div>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label>Profile Picture</label>
+                    <div class="profile-upload">
+                        <img id="previewImage" src="../assets/images/pp.jpg" alt="Profile Picture">
+                        <input type="file" id="profilePicture" accept="image/*">
+                        <label for="profilePicture" class="upload-btn">
+                            <i class="fas fa-camera"></i>
+                            Change Photo
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="editName" value="Halim Elsa Putra">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="editEmail" value="halim@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="editPhone" value="+62-8774493221">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" onclick="closeEditModal()">Cancel</button>
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Tambahkan script sebelum penutup body tag -->
+    <script>
+        // Fungsi untuk menampilkan popup
+        function showPopup() {
+            document.getElementById('confirmationPopup').style.display = 'flex';
+        }
+    
+        function closePopup() {
+            document.getElementById('confirmationPopup').style.display = 'none';
+        }
+    
+        function confirmAction() {
+            // Add your logout logic here
+            alert('Logging out...');
+            closePopup();
+        }
+    
+        // Close popup when clicking outside
+        window.onclick = function(event) {
+            const popup = document.getElementById('confirmationPopup');
+            if (event.target == popup) {
+                closePopup();
+            }
+        }
+    
+        // Tambahkan event listener ke tombol logout
+        document.querySelector('.logout-btn').addEventListener('click', showPopup);
+    
+        // Fungsi untuk modal edit profile
+        function showEditModal() {
+            document.getElementById('editProfileModal').style.display = 'flex';
+        }
+    
+        function closeEditModal() {
+            document.getElementById('editProfileModal').style.display = 'none';
+        }
+    
+        // Preview gambar yang dipilih
+        document.getElementById('profilePicture').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('previewImage').src = e.target.result;
+                    document.getElementById('profile-pic').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    
+        // Handle form submission
+        document.getElementById('editProfileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Update profile information
+            document.getElementById('name').textContent = document.getElementById('editName').value;
+            document.getElementById('email').textContent = document.getElementById('editEmail').value;
+            document.getElementById('phone').textContent = document.getElementById('editPhone').value;
+            
+            closeEditModal();
+        });
+    
+        // Add click event to edit profile button
+        document.querySelector('.edit-profile-btn').addEventListener('click', showEditModal);
+    
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('editProfileModal');
+            if (event.target == modal) {
+                closeEditModal();
+            }
+        }
+    </script>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 EdemyX, Inc. All rights reserved.</p>
+    </footer>
+
+  <script src="../assets/js/profile.js"></script>
+</body>
+</html>

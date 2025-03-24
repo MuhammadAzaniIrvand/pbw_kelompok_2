@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress - EdemyX</title>
+    <link rel="stylesheet" href="../assets/css/navbar-sidebar.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        <!-- Unified Navigation -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-left">
+                    <div class="logo">
+                        <a href="index.html">EdemyX</a>
+                    </div>
+                    <ul class="nav-links">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Explore <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-container">
+                                    <div class="dropdown-column">
+                                        <h4>Explore Certifications</h4>
+                                        <ul>
+                                            <li><a href="#">Certification Prep</a></li>
+                                            <li><a href="#">Development</a></li>
+                                            <li><a href="#">Business</a></li>
+                                            <li><a href="#">Finance & Accounting</a></li>
+                                            <li><a href="#">IT & Software</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-column">
+                                        <h4>Popular Categories</h4>
+                                        <ul>
+                                            <li><a href="#">Engineering</a></li>
+                                            <li><a href="#">Humanities</a></li>
+                                            <li><a href="#">Mathematics</a></li>
+                                            <li><a href="#">Science</a></li>
+                                            <li><a href="#">Online Education</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-column">
+                                        <h4>Special Topics</h4>
+                                        <ul>
+                                            <li><a href="#">Language Learning</a></li>
+                                            <li><a href="#">Teacher Training</a></li>
+                                            <li><a href="#">Test Preparation</a></li>
+                                            <li><a href="#">Teaching & Academics</a></li>
+                                            <li><a href="#">Social Sciences</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-center">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for courses...">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <a href="wishlist.html" class="nav-icon"><i class="fas fa-heart"></i></a>
+                    <a href="notifications.html" class="nav-icon"><i class="fas fa-bell"></i></a>
+                    <div class="user-menu">
+                        <img src="https://via.placeholder.com/40" alt="Profile" class="user-avatar">
+                        <div class="user-dropdown">
+                            <a href="dashboard.html">Dashboard</a>
+                            <a href="my-courses.html">My Courses</a>
+                            <a href="profile.html">Profile</a>
+                            <a href="settings.html">Settings</a>
+                            <a href="logout.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+     <!-- Main Content -->
+     <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="user-dashboard.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                <li><a href="my-courses.html"><i class="fas fa-book"></i> My Courses</a></li>
+                <li><a href="certificates.html"><i class="fas fa-certificate"></i> Certificates</a></li>
+                <li class="active"><a href="progress.html"><i class="fas fa-chart-line"></i> Progress</a></li>
+                <li><a href="schedule.html"><i class="fas fa-calendar"></i> Schedule</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            </ul>
+        </aside>
+            <section class="progress-section">
+                <h1>My Progress</h1>
+                <p>Here is your progress in the courses you are enrolled in.</p>
+                <div class="course-cards">
+                    <div class="course-card">
+                        <div class="course-thumbnail">
+                            <img src="../assets/images/webdev.jpg" alt="Web Development">
+                        </div>
+                <div class="courses-container">
+                    <div class="course-card">
+                        <img src="course1.png" alt="Course 1">
+                        <h3>Complete Web Development Bootcamp</h3>
+                        <p>Instructor: Jane Smith</p>
+                        <p class="progress-text">Progress: <span class="progress-percent">75%</span></p>
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="course2.png" alt="Course 2">
+                        <h3>Python for Data Science</h3>
+                        <p>Instructor: Robert Johnson</p>
+                        <p class="progress-text">Progress: <span class="progress-percent">35%</span></p>
+                        <div class="progress-bar" style="width: 35%;"></div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="course3.png" alt="Course 3">
+                        <h3>UI/UX Design Fundamentals</h3>
+                        <p>Instructor: Sarah Williams</p>
+                        <p class="progress-text">Progress: <span class="progress-percent">60%</span></p>
+                        <div class="progress-bar" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 EdemyX, Inc. All rights reserved.</p>
+</footer>
+
+<script src="../assets/js/progess.js"></script>
+</body>
+</html>

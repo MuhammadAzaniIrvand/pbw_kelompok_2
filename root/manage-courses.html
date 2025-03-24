@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Course - EdemyX</title>
+    <link rel="stylesheet" href="../assets/css/course.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <header class="navbar">
+            <div class="left-section">
+                <div class="logo">EdemyX</div>
+                <nav>
+                    <a href="#">Explore ▾</a>
+                    <a href="#">Courses</a>
+                    <a href="#">Categories</a>
+                </nav>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search for courses...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="icons">
+                <span class="icon"><i class="fas fa-heart"></i></span>
+                <span class="icon"><i class="fas fa-bell"></i><span class="notification-badge">3</span></span>
+                <a href="#" class="profile-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Layout -->
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="dashboard-admin.html"><i class="fas fa-th"></i> Dashboard</a></li>
+                    <li><a href="manage-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+                    <li class="active"><a href="#"><i class="fas fa-book"></i> Manage Courses</a></li>
+                    <li><a href="#" data-section="classes"><i class="fas fa-chalkboard-teacher"></i> Manage Classes</a></li>
+                    <li><a href="#" data-section="payments"><i class="fas fa-credit-card"></i> Payments & Finance</a></li>
+                    <li><a href="#" data-section="certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+                    <li><a href="#" data-section="reports"><i class="fas fa-chart-line"></i> Reports & Analytics</a></li>
+                    <li><a href="#" data-section="schedule"><i class="fas fa-calendar"></i> Schedule</a></li>
+                    <li><a href="#" data-section="logs"><i class="fas fa-history"></i> Activity Logs</a></li>
+                    <li><a href="#" data-section="profile"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#" data-section="settings"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#" data-section="help"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                </ul>
+            </aside>
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="page-header">
+                    <h1>Manage Courses</h1>
+                    <div class="actions">
+                        <button class="btn btn-outline"><i class="fas fa-filter"></i> Filter</button>
+                        <button class="btn btn-outline"><i class="fas fa-sort"></i> Sort</button>
+                        <button class="add-course-btn"><i class="fas fa-plus"></i> Add Course</button>
+                    </div>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i class="fas fa-book"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Courses</h3>
+                            <p class="stat-number">248</p>
+                            <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 12% from last month</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="fas fa-user-graduate"></i></div>
+                        <div class="stat-info">
+                            <h3>Active Enrollments</h3>
+                            <p class="stat-number">1,842</p>
+                            <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 8% from last month</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange"><i class="fas fa-star"></i></div>
+                        <div class="stat-info">
+                            <h3>Average Rating</h3>
+                            <p class="stat-number">4.7</p>
+                            <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 0.2 from last month</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="stat-info">
+                            <h3>Revenue</h3>
+                            <p class="stat-number">$45,678</p>
+                            <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 15% from last month</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Management -->
+                <div class="course-management">
+                    <div class="filter-controls">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search courses...">
+                        </div>
+                        <div class="filter-group">
+                            <select>
+                                <option>All Categories</option>
+                                <option>Web Development</option>
+                                <option>Mobile Development</option>
+                                <option>Data Science</option>
+                                <option>Design</option>
+                                <option>Business</option>
+                            </select>
+                            <select>
+                                <option>All Status</option>
+                                <option>Published</option>
+                                <option>Draft</option>
+                                <option>Archived</option>
+                            </select>
+                            <select>
+                                <option>All Instructors</option>
+                                <option>John Smith</option>
+                                <option>Maria Rodriguez</option>
+                                <option>David Chen</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Courses Table -->
+                    <div class="courses-table-container">
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Category</th>
+                                    <th>Instructor</th>
+                                    <th>Enrolled</th>
+                                    <th>Rating</th>
+                                    <th>Status</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Course 1 -->
+                                <tr>
+                                    <td class="course-info">
+                                        <img src="../assets/images/course 1.jpg" alt="Course thumbnail">
+                                        <div>
+                                            <h4>Coding Course For Beginners</h4>
+                                            <p>Created: Feb 28, 2025</p>
+                                        </div>
+                                    </td>
+                                    <td>Mobile Development</td>
+                                    <td>Michael Lee</td>
+                                    <td>218</td>
+                                    <td>4.6 <i class="fas fa-star gold"></i></td>
+                                    <td><span class="status published">Published</span></td>
+                                    <td>$79.99</td>
+                                    <td class="actions">
+                                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Course 2 -->
+                                <tr>
+                                    <td class="course-info">
+                                        <img src="../assets/images/course 2.png" alt="Course thumbnail">
+                                        <div>
+                                            <h4>Python For Data Science</h4>
+                                            <p>Created: Mar 5, 2025</p>
+                                        </div>
+                                    </td>
+                                    <td>Data Science</td>
+                                    <td>David Chen</td>
+                                    <td>289</td>
+                                    <td>4.9 <i class="fas fa-star gold"></i></td>
+                                    <td><span class="status published">Published</span></td>
+                                    <td>$99.99</td>
+                                    <td class="actions">
+                                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Course 3 -->
+                                <tr>
+                                    <td class="course-info">
+                                        <img src="../assets/images/course 3.png" alt="Course thumbnail">
+                                        <div>
+                                            <h4>UI/UX Design Mini Course</h4>
+                                            <p>Created: Jan 15, 2025</p>
+                                        </div>
+                                    </td>
+                                    <td>Design</td>
+                                    <td>Johnson</td>
+                                    <td>176</td>
+                                    <td>4.7 <i class="fas fa-star gold"></i></td>
+                                    <td><span class="status published">Published</span></td>
+                                    <td>$69.99</td>
+                                    <td class="actions">
+                                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Course 4 -->
+                                <tr>
+                                    <td class="course-info">
+                                        <img src="../assets/images/course 4.png" alt="Course thumbnail">
+                                        <div>
+                                            <h4>Business Analytics Fundamentals</h4>
+                                            <p>Created: Mar 18, 2025</p>
+                                        </div>
+                                    </td>
+                                    <td>Business</td>
+                                    <td>Maria Rodriguez</td>
+                                    <td>142</td>
+                                    <td>4.5 <i class="fas fa-star gold"></i></td>
+                                    <td><span class="status archived">Archived</span></td>
+                                    <td>$59.99</td>
+                                    <td class="actions">
+                                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Course 5 -->
+                                <tr>
+                                    <td class="course-info">
+                                        <img src="../assets/images/course 5.png" alt="Course thumbnail">
+                                        <div>
+                                            <h4>Javascript Full Course</h4>
+                                            <p>Created: Feb 10, 2025</p>
+                                        </div>
+                                    </td>
+                                    <td>Web Development</td>
+                                    <td>John Smith</td>
+                                    <td>198</td>
+                                    <td>4.8 <i class="fas fa-star gold"></i></td>
+                                    <td><span class="status archived">Archived</span></td>
+                                    <td>$74.99</td>
+                                    <td class="actions">
+                                        <button class="action-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <div class="pagination-info">Showing 1-5 of 248 courses</div>
+                        <div class="pagination-controls">
+                            <button class="page-btn disabled"><i class="fas fa-chevron-left"></i></button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn">4</button>
+                            <button class="page-btn">5</button>
+                            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="per-page">
+                            <label>Rows per page:</label>
+                            <select>
+                                <option>10</option>
+                                <option>25</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
