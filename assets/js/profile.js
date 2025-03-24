@@ -1,35 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const nameField = document.getElementById("name");
-    const emailField = document.getElementById("email");
-    const profilePics = document.querySelectorAll(".profile-pic"); // Pilih semua foto profil
+    const profilePics = document.querySelectorAll(".profile-pic"); // Pilih semua elemen gambar profil
     const fileInput = document.getElementById("profilePicture");
 
-    // Ambil data user dari localStorage atau gunakan default
-    const userData = JSON.parse(localStorage.getItem("userProfile")) || {
-        name: "Halim Elsa Putra",
-        email: "halim@gmail.com",
-        profilePic: "pp.jpg"
+    // Ambil data user dari localStorage atau gunakan default jika belum ada
+    let userData = JSON.parse(localStorage.getItem("userProfile")) || {
+        profilePic: "../assets/images/profile.jpg" // Gambar default jika user belum mengganti
     };
 
-    // Tampilkan data di semua elemen yang menggunakan profile-pic
-    nameField.textContent = userData.name;
-    emailField.textContent = userData.email;
-    profilePics.forEach(img => img.src = userData.profilePic);
+    // Fungsi untuk memperbarui semua foto profil (navbar, dashboard, admin)
+    function updateProfileImages(src) {
+        profilePics.forEach(img => img.src = src);
+    }
+
+    // Saat halaman dimuat, gunakan gambar terbaru dari localStorage
+    updateProfileImages(userData.profilePic);
 
     // Saat user mengganti foto profil
-    fileInput.addEventListener("change", function (event) {
-        const file = event.target.files[0];
+    if (fileInput) {
+        fileInput.addEventListener("change", function (event) {
+            const file = event.target.files[0];
 
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                profilePics.forEach(img => img.src = e.target.result); // Ganti semua gambar
-                userData.profilePic = e.target.result; // Simpan di userData
-                localStorage.setItem("userProfile", JSON.stringify(userData)); // Simpan ke localStorage
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const newImage = e.target.result; // Simpan dalam format Base64
+                    updateProfileImages(newImage); // Perbarui semua foto profil
+                    userData.profilePic = newImage; // Simpan ke userData
+                    localStorage.setItem("userProfile", JSON.stringify(userData)); // Simpan ke localStorage
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+});
+
 
     // Saat user mengedit profil
     document.getElementById("editProfileForm").addEventListener("submit", function (e) {
@@ -37,26 +41,27 @@ document.addEventListener("DOMContentLoaded", function () {
         userData.name = document.getElementById("editName").value;
         userData.email = document.getElementById("editEmail").value;
         
-        // Simpan ke localStorage
+        // Simpan perubahan ke localStorage
         localStorage.setItem("userProfile", JSON.stringify(userData));
 
         // Perbarui tampilan di halaman
         nameField.textContent = userData.name;
         emailField.textContent = userData.email;
 
-        closeEditModal(); // Tutup modal setelah simpan
+        closeEditModal(); 
     });
 
-    // Fungsi Logout
+    // Logout: Hapus data profil dari localStorage
     document.querySelector(".logout-btn").addEventListener("click", function () {
         document.getElementById("confirmationPopup").style.display = "flex";
     });
 
     document.querySelector(".confirm-btn").addEventListener("click", function () {
-        localStorage.removeItem("userProfile");
-        window.location.href = "login.html"; // Redirect ke halaman login
+        localStorage.removeItem("userProfile"); // Hapus data pengguna
+        window.location.href = "login.html"; // Arahkan ke halaman login
     });
 
+    // Fungsi untuk menutup popup
     function closePopup() {
         document.getElementById("confirmationPopup").style.display = "none";
     }
@@ -64,4 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeEditModal() {
         document.getElementById("editProfileModal").style.display = "none";
     }
-});
+
